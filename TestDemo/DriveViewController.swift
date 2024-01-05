@@ -11,6 +11,8 @@ import CoreLocation
 
 class DriveViewController: UIViewController, GizoAnalysisDelegate {
     var previewView: UIView!
+    var recordBtn: UIButton?
+    var previewBtn: UIButton?
     
     func onImuSensor(acceleration: NSDictionary?, linearAcceleration: NSDictionary?, accelerationUnc: NSDictionary?, gyroscope: NSDictionary?, magnetic: NSDictionary?, gravity: NSDictionary?) {
         print("onImuSensor: acceleration=\(String(describing: acceleration)) linearAcceleration=\(String(describing: linearAcceleration)) accelerationUnc=\(String(describing: accelerationUnc)) gyroscope=\(String(describing: gyroscope)) magnetic=\(String(describing: magnetic)) gravity=\(String(describing: gravity))")
@@ -91,14 +93,30 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
         backBtn.addTarget(self, action: #selector(onBackClick), for: .touchUpInside)
         self.view.addSubview(backBtn)
         
+        recordBtn = UIButton.init(type: .custom)
+        recordBtn!.frame = CGRect.init(x: 100, y: 40, width: 150, height: 40);
+        recordBtn!.backgroundColor = UIColor.blue
+        recordBtn!.setTitle("Start Record", for: .normal)
+        recordBtn!.setTitle("Stop Record", for: .selected)
+        recordBtn!.addTarget(self, action: #selector(onRecordClick), for: .touchUpInside)
+        self.view.addSubview(recordBtn!)
+        
+        previewBtn = UIButton.init(type: .custom)
+        previewBtn!.frame = CGRect.init(x: 270, y: 40, width: 80, height: 40);
+        previewBtn!.backgroundColor = UIColor.blue
+        previewBtn!.setTitle("Attach", for: .normal)
+        previewBtn!.setTitle("UnAttach", for: .selected)
+        previewBtn!.addTarget(self, action: #selector(onAttachClick), for: .touchUpInside)
+        self.view.addSubview(previewBtn!)
+        
         Gizo.app.gizoAnalysis.start(lifecycleOwner: self) {
             print("Gizo.app.gizoAnalysis.start done")
         }
-        Gizo.app.gizoAnalysis.startSavingSession()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        previewBtn?.isSelected = true
         Gizo.app.gizoAnalysis.attachPreview(preview: previewView)
     }
     
@@ -110,6 +128,26 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
         Gizo.app.gizoAnalysis.stopSavingSession()
         Gizo.app.gizoAnalysis.stop()
         self.dismiss(animated: true)
+    }
+    
+    @objc func onRecordClick() {
+        recordBtn?.isSelected = !(recordBtn!.isSelected)
+        if (recordBtn!.isSelected) {
+            Gizo.app.gizoAnalysis.startSavingSession()
+        }
+        else {
+            Gizo.app.gizoAnalysis.stopSavingSession()
+        }
+    }
+    
+    @objc func onAttachClick() {
+        previewBtn?.isSelected = !(previewBtn!.isSelected)
+        if (previewBtn!.isSelected) {
+            Gizo.app.gizoAnalysis.attachPreview(preview: previewView)
+        }
+        else {
+            Gizo.app.gizoAnalysis.attachPreview(preview: nil)
+        }
     }
     
     //Orientation
