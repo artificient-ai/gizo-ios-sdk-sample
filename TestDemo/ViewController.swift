@@ -29,7 +29,6 @@ class ViewController: UIViewController, GizoDelegate {
         options.gpsSetting.allowGps = true
         options.gpsSetting.saveCsvFile = true
         options.imuSetting.allowMagneticSensor = true
-        options.imuSetting.allowGravitySensor = true
         options.imuSetting.allowGyroscopeSensor = true
         options.imuSetting.allowAccelerationSensor = true
         options.imuSetting.saveCsvFile = true
