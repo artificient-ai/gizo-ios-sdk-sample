@@ -1,16 +1,17 @@
 //
-//  DriveViewController.swift
-//  TestFMKDemo
+//  DriveNoCameraViewController.swift
+//  TestDemo
 //
-//  Created by Hepburn on 2023/12/7.
+//  Created by Hepburn on 2024/1/4.
 //
 
 import UIKit
 import GizoSDK
 import CoreLocation
 
-class DriveViewController: UIViewController, GizoAnalysisDelegate {
-    var previewView: UIView!
+class DriveNoCameraViewController: UIViewController, GizoAnalysisDelegate {
+    private var timeView: DriveTimeView?
+    private var button: UIButton?
     
     func onImuSensor(acceleration: NSDictionary?, linearAcceleration: NSDictionary?, accelerationUnc: NSDictionary?, gyroscope: NSDictionary?, magnetic: NSDictionary?, gravity: NSDictionary?) {
         print("onImuSensor: acceleration=\(String(describing: acceleration)) linearAcceleration=\(String(describing: linearAcceleration)) accelerationUnc=\(String(describing: accelerationUnc)) gyroscope=\(String(describing: gyroscope)) magnetic=\(String(describing: magnetic)) gravity=\(String(describing: gravity))")
@@ -75,58 +76,57 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
     func onGravityAlignmentChange(isAlign: Bool) {
         print("onGravityAlignmentChange: isAlign=\(isAlign)")
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        let width: CGFloat = self.view.frame.size.width
-        let height: CGFloat = self.view.frame.size.height
-        previewView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: max(width, height), height: min(width, height)))
-        previewView.backgroundColor = UIColor.black
-        self.view.addSubview(previewView)
         
         let backBtn = UIButton.init(type: .custom)
         backBtn.frame = CGRect.init(x: 20, y: 40, width: 40, height: 40);
-        backBtn.setImage(UIImage.init(named: "lnr_back2"), for: .normal)
+        backBtn.setImage(UIImage.init(named: "lnr_back"), for: .normal)
         backBtn.addTarget(self, action: #selector(onBackClick), for: .touchUpInside)
         self.view.addSubview(backBtn)
         
+        timeView = DriveTimeView.init(frame: CGRect.init(x: 50, y: 100, width: 253, height: 48))
+        view.addSubview(timeView!)
+        
+        button = UIButton.init(type: .custom)
+        button!.frame = CGRect.init(x: 100, y: 200, width: 200, height: 40)
+        button!.backgroundColor = UIColor.blue
+        button!.setTitle("Start", for: .normal)
+        button!.setTitle("Stop", for: .selected)
+        button!.addTarget(self, action: #selector(onButtonClick), for: .touchUpInside)
+        self.view.addSubview(button!)
+        
+    }
+    
+    @objc func onButtonClick() {
+        button?.isSelected = !(button!.isSelected)
+        if ((button?.isSelected)!) {
+            startDrive()
+        }
+        else {
+            stopDrive()
+        }
+    }
+    
+    func startDrive() {
+        timeView?.startTimer()
         Gizo.app.gizoAnalysis.start(lifecycleOwner: self) {
             print("Gizo.app.gizoAnalysis.start done")
         }
         Gizo.app.gizoAnalysis.startSavingSession()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        Gizo.app.gizoAnalysis.attachPreview(preview: previewView)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    func stopDrive() {
+        timeView?.stopTimer()
+        Gizo.app.gizoAnalysis.stopSavingSession()
+        Gizo.app.gizoAnalysis.stop()
     }
     
     @objc func onBackClick() {
-        Gizo.app.gizoAnalysis.stopSavingSession()
-        Gizo.app.gizoAnalysis.stop()
+        stopDrive()
         self.dismiss(animated: true)
     }
-    
-    //Orientation
-    override var shouldAutorotate: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return [UIInterfaceOrientationMask.landscapeLeft, UIInterfaceOrientationMask.landscapeRight]
-    }
-
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        return UIInterfaceOrientation.landscapeRight
-    }
-    
-    override open var prefersStatusBarHidden: Bool {
-        return true
-    }
-
 }

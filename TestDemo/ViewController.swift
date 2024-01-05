@@ -29,8 +29,9 @@ class ViewController: UIViewController, GizoDelegate {
         options.gpsSetting.allowGps = true
         options.gpsSetting.saveCsvFile = true
         options.imuSetting.allowMagneticSensor = true
-        options.imuSetting.allowMagneticSensor = true
-        options.imuSetting.allowMagneticSensor = true
+        options.imuSetting.allowGravitySensor = true
+        options.imuSetting.allowGyroscopeSensor = true
+        options.imuSetting.allowAccelerationSensor = true
         options.imuSetting.saveCsvFile = true
         options.batterySetting.checkBattery = true
         options.orientationSetting.allowGravitySensor = true
@@ -39,15 +40,30 @@ class ViewController: UIViewController, GizoDelegate {
         Gizo.app.loadModel()
         
         let btn = UIButton.init(type: .custom)
-        btn.frame = CGRect.init(x: 100, y: 100, width: 100, height: 40)
+        btn.frame = CGRect.init(x: 50, y: 100, width: 250, height: 40)
         btn.backgroundColor = UIColor.blue
-        btn.setTitle("Drive", for: .normal)
+        btn.setTitle("Drive Now（With Camera）", for: .normal)
         btn.addTarget(self, action: #selector(onButtonClick), for: .touchUpInside)
         self.view.addSubview(btn)
+        
+        let btn2 = UIButton.init(type: .custom)
+        btn2.frame = CGRect.init(x: 50, y: 200, width: 250, height: 40)
+        btn2.backgroundColor = UIColor.blue
+        btn2.setTitle("Drive Now（No Camera）", for: .normal)
+        btn2.addTarget(self, action: #selector(onButton2Click), for: .touchUpInside)
+        self.view.addSubview(btn2)
     }
 
     @objc func onButtonClick() {
+        Gizo.options?.analysisSetting.allowAnalysis = true
         let ctrl = DriveViewController.init()
+        ctrl.modalPresentationStyle = UIModalPresentationStyle.fullScreen;
+        self.present(ctrl, animated: true, completion: nil)
+    }
+    
+    @objc func onButton2Click() {
+        Gizo.options?.analysisSetting.allowAnalysis = false
+        let ctrl = DriveNoCameraViewController.init()
         ctrl.modalPresentationStyle = UIModalPresentationStyle.fullScreen;
         self.present(ctrl, animated: true, completion: nil)
     }
