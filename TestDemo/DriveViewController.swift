@@ -13,6 +13,8 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
     var previewView: UIView!
     var recordBtn: UIButton?
     var previewBtn: UIButton?
+    var speedLabel: UILabel!
+    var speedLimitLabel: UILabel!
     
     func onImuSensor(acceleration: NSDictionary?, linearAcceleration: NSDictionary?, accelerationUnc: NSDictionary?, gyroscope: NSDictionary?, magnetic: NSDictionary?, gravity: NSDictionary?) {
         print("onImuSensor: acceleration=\(String(describing: acceleration)) linearAcceleration=\(String(describing: linearAcceleration)) accelerationUnc=\(String(describing: accelerationUnc)) gyroscope=\(String(describing: gyroscope)) magnetic=\(String(describing: magnetic)) gravity=\(String(describing: gravity))")
@@ -64,6 +66,14 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
     
     func onSpeedChange(speedLimitKph: Int?, speedKph: Int) {
         print("onSpeedChange: speedLimitKph=\(String(describing: speedLimitKph)) speedKph=\(speedKph)")
+        speedLabel.text = "Speed: \(speedKph) km/h"
+        if (speedLimitKph != nil) {
+            speedLimitLabel.text = "SpeedLimit: \(speedLimitKph!)"
+            speedLimitLabel.isHidden = false
+        }
+        else {
+            speedLimitLabel.isHidden = true
+        }
     }
     
     func onRecordingEvent(status: VideoRecordStatus) {
@@ -97,17 +107,32 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
         recordBtn!.frame = CGRect.init(x: 100, y: 40, width: 150, height: 40);
         recordBtn!.backgroundColor = UIColor.blue
         recordBtn!.setTitle("Start Record", for: .normal)
-        recordBtn!.setTitle("Stop Record", for: .selected)
+        recordBtn!.setTitle("End Record", for: .selected)
         recordBtn!.addTarget(self, action: #selector(onRecordClick), for: .touchUpInside)
         self.view.addSubview(recordBtn!)
         
         previewBtn = UIButton.init(type: .custom)
-        previewBtn!.frame = CGRect.init(x: 270, y: 40, width: 80, height: 40);
+        previewBtn!.frame = CGRect.init(x: 270, y: 40, width: 90, height: 40);
         previewBtn!.backgroundColor = UIColor.blue
         previewBtn!.setTitle("Attach", for: .normal)
-        previewBtn!.setTitle("UnAttach", for: .selected)
+        previewBtn!.setTitle("Detach", for: .selected)
         previewBtn!.addTarget(self, action: #selector(onAttachClick), for: .touchUpInside)
         self.view.addSubview(previewBtn!)
+        
+        speedLabel = UILabel.init()
+        speedLabel.frame = CGRect.init(x: 50, y: 100, width: 200, height: 20);
+        speedLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        speedLabel.textColor = UIColor.white
+        speedLabel.text = "Speed: 0 km/h"
+        self.view.addSubview(speedLabel)
+        
+        speedLimitLabel = UILabel.init()
+        speedLimitLabel.frame = CGRect.init(x: 50, y: 140, width: 200, height: 20);
+        speedLimitLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        speedLimitLabel.textColor = UIColor.white
+        speedLimitLabel.isHidden = true
+        speedLimitLabel.text = "SpeedLimit: 0"
+        self.view.addSubview(speedLimitLabel)
         
         Gizo.app.gizoAnalysis.start(lifecycleOwner: self) {
             print("Gizo.app.gizoAnalysis.start done")
