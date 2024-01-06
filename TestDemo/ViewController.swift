@@ -12,10 +12,9 @@ import CoreML
 
 class ViewController: UIViewController, GizoDelegate {
     var model: MLModel?
-    func onLoadModel(status: LoadModelStatus) {
-        print("onLoadModel status=\(status.rawValue)")
+    func setLoadModelObserver(status: LoadModelStatus) {
+        print("setLoadModelObserver status=\(status.rawValue)")
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
