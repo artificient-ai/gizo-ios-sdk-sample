@@ -16,12 +16,23 @@
 		1B62E9FC2B3166FB00F8B91D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9FA2B3166FB00F8B91D /* Main.storyboard */; };
 		1B62E9FE2B3166FE00F8B91D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9FD2B3166FE00F8B91D /* Assets.xcassets */; };
 		1B62EA012B3166FE00F8B91D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9FF2B3166FE00F8B91D /* LaunchScreen.storyboard */; };
-		1B7794572B4043A2000D4074 /* GizoSDK-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 1B7794562B4043A2000D4074 /* GizoSDK-iOS */; };
 		1B9438FC2B3D668000285788 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9438F22B3D668000285788 /* DriveViewController.swift */; };
 		1B9438FD2B3D668000285788 /* ArtiSense3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1B9438F42B3D668000285788 /* ArtiSense3.mlmodel */; };
 		1BF4D6C52B493FDC005BF87D /* license.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4D6C32B493FDC005BF87D /* license.json */; };
 		1BF4D6C62B493FDC005BF87D /* publickey.pem in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4D6C42B493FDC005BF87D /* publickey.pem */; };
+		2A5116B62B72B272008D5699 /* GizoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5116B42B72B25A008D5699 /* GizoSDK.framework */; };
+		2A5315BE2B72BAC5007B51EB /* GizoSDK-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 2A5315BD2B72BAC5007B51EB /* GizoSDK-iOS */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A5116B32B72B25A008D5699 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A5116AE2B72B25A008D5699 /* GizoSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B8918D92B05B44B00185633;
+			remoteInfo = GizoSDK;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B0F8A912B46845900A7A793 /* DriveNoCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveNoCameraViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +50,7 @@
 		1B9438F42B3D668000285788 /* ArtiSense3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ArtiSense3.mlmodel; sourceTree = "<group>"; };
 		1BF4D6C32B493FDC005BF87D /* license.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = license.json; sourceTree = "<group>"; };
 		1BF4D6C42B493FDC005BF87D /* publickey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = publickey.pem; sourceTree = "<group>"; };
+		2A5116AE2B72B25A008D5699 /* GizoSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GizoSDK.xcodeproj; path = "../gizo-ios-sdk-source/GizoSDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B7794572B4043A2000D4074 /* GizoSDK-iOS in Frameworks */,
+				2A5315BE2B72BAC5007B51EB /* GizoSDK-iOS in Frameworks */,
+				2A5116B62B72B272008D5699 /* GizoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +69,10 @@
 		1B62E9E82B3166FB00F8B91D = {
 			isa = PBXGroup;
 			children = (
+				2A5116AE2B72B25A008D5699 /* GizoSDK.xcodeproj */,
 				1B62E9F32B3166FB00F8B91D /* TestDemo */,
 				1B62E9F22B3166FB00F8B91D /* Products */,
+				2A5116B52B72B272008D5699 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +121,21 @@
 			path = License;
 			sourceTree = "<group>";
 		};
+		2A5116AF2B72B25A008D5699 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A5116B42B72B25A008D5699 /* GizoSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A5116B52B72B272008D5699 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,7 +153,7 @@
 			);
 			name = TestDemo;
 			packageProductDependencies = (
-				1B7794562B4043A2000D4074 /* GizoSDK-iOS */,
+				2A5315BD2B72BAC5007B51EB /* GizoSDK-iOS */,
 			);
 			productName = TestDemo;
 			productReference = 1B62E9F12B3166FB00F8B91D /* TestDemo.app */;
@@ -154,16 +184,32 @@
 			);
 			mainGroup = 1B62E9E82B3166FB00F8B91D;
 			packageReferences = (
-				1B7794552B4043A2000D4074 /* XCRemoteSwiftPackageReference "gizo-ios-sdk-alpha" */,
+				2A5315BC2B72BAC5007B51EB /* XCRemoteSwiftPackageReference "gizo-ios-sdk-alpha" */,
 			);
 			productRefGroup = 1B62E9F22B3166FB00F8B91D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2A5116AF2B72B25A008D5699 /* Products */;
+					ProjectRef = 2A5116AE2B72B25A008D5699 /* GizoSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1B62E9F02B3166FB00F8B91D /* TestDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2A5116B42B72B25A008D5699 /* GizoSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GizoSDK.framework;
+			remoteRef = 2A5116B32B72B25A008D5699 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1B62E9EF2B3166FB00F8B91D /* Resources */ = {
@@ -339,10 +385,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XZA48S9PM9;
+				DEVELOPMENT_TEAM = 59T7H63PY8;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestDemo/Info.plist;
@@ -363,7 +409,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.app1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = TestCommon0428;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -375,10 +421,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XZA48S9PM9;
+				DEVELOPMENT_TEAM = 59T7H63PY8;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestDemo/Info.plist;
@@ -399,7 +445,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.app1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = TestCommon0428;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,7 +476,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1B7794552B4043A2000D4074 /* XCRemoteSwiftPackageReference "gizo-ios-sdk-alpha" */ = {
+		2A5315BC2B72BAC5007B51EB /* XCRemoteSwiftPackageReference "gizo-ios-sdk-alpha" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/artificient-ai/gizo-ios-sdk-alpha";
 			requirement = {
@@ -441,9 +487,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1B7794562B4043A2000D4074 /* GizoSDK-iOS */ = {
+		2A5315BD2B72BAC5007B51EB /* GizoSDK-iOS */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1B7794552B4043A2000D4074 /* XCRemoteSwiftPackageReference "gizo-ios-sdk-alpha" */;
+			package = 2A5315BC2B72BAC5007B51EB /* XCRemoteSwiftPackageReference "gizo-ios-sdk-alpha" */;
 			productName = "GizoSDK-iOS";
 		};
 /* End XCSwiftPackageProductDependency section */
