@@ -88,6 +88,10 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
         print("onGravityAlignmentChange: isAlign=\(isAlign)")
     }
 
+    func onUserActivity(type: String) {
+        print("onUserActivity: type=\(type)")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white

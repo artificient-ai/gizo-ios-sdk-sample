@@ -10,6 +10,7 @@ import GizoSDK
 import CoreLocation
 
 class DriveNoCameraViewController: UIViewController, GizoAnalysisDelegate {
+    
     private var timeView: DriveTimeView?
     private var button: UIButton?
     
@@ -75,6 +76,10 @@ class DriveNoCameraViewController: UIViewController, GizoAnalysisDelegate {
     
     func onGravityAlignmentChange(isAlign: Bool) {
         print("onGravityAlignmentChange: isAlign=\(isAlign)")
+    }
+    
+    func onUserActivity(type: String) {
+        print("onUserActivity: type=\(type)")
     }
     
 
