@@ -39,7 +39,7 @@ class ViewController: UIViewController, GizoDelegate {
         options.userActivitySetting.saveCsvFile = true
         Gizo.initialize(delegate: self, options: options)
         Gizo.app.loadModel()
-        
+                
         let btn = UIButton.init(type: .custom)
         btn.frame = CGRect.init(x: 50, y: 100, width: 250, height: 40)
         btn.backgroundColor = UIColor.blue

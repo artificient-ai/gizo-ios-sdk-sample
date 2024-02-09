@@ -22,7 +22,7 @@ class DriveNoCameraViewController: UIViewController, GizoAnalysisDelegate {
         print("onSessionStatus: inProgress=\(inProgress) previewAttached=\(previewAttached)")
     }
     
-    func onAnalysisResult(preview: UIImage?, ttc: Float?, ttcStatus: TTCStatus, frontObjectDistance: String, egoSpeed: Float?, gpsTime: String) {
+    func onAnalysisResult(preview: UIImage?, ttc: Float?, ttcStatus: TTCStatus, frontObjectDistance: String, egoSpeed: Int?, gpsTime: String) {
         print("onAnalysisResult: ttc=\(String(describing: ttc)) ttcStatus=\(ttcStatus.rawValue) frontObjectDistance=\(frontObjectDistance) egoSpeed=\(String(describing: egoSpeed)) gpsTime=\(gpsTime)")
     }
     
@@ -50,11 +50,11 @@ class DriveNoCameraViewController: UIViewController, GizoAnalysisDelegate {
         print("onMagneticSensor: magX=\(String(describing: magX)) magY=\(String(describing: magY)) magZ=\(String(describing: magZ))")
     }
     
-    func ttcCalculator(frontObjectDistance: String, egoSpeed: Float?, ttc: Float?) {
+    func ttcCalculator(frontObjectDistance: String, egoSpeed: Int?, ttc: Float?) {
         print("ttcCalculator: frontObjectDistance=\(frontObjectDistance) egoSpeed=\(String(describing: egoSpeed)) ttc=\(String(describing: ttc))")
     }
     
-    func ttcStatusCalculator(ttc: Float?, egoSpeed: Float?, ttcStatus: TTCStatus) {
+    func ttcStatusCalculator(ttc: Float?, egoSpeed: Int?, ttcStatus: TTCStatus) {
         print("ttcStatusCalculator: ttc=\(String(describing: ttc)) egoSpeed=\(String(describing: egoSpeed)) ttcStatus=\(ttcStatus.rawValue)")
     }
     

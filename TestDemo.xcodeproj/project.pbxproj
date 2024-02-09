@@ -23,6 +23,7 @@
 		2A5116B62B72B272008D5699 /* GizoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5116B42B72B25A008D5699 /* GizoSDK.framework */; };
 		2A5315BE2B72BAC5007B51EB /* GizoSDK-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 2A5315BD2B72BAC5007B51EB /* GizoSDK-iOS */; };
 		2A5315CE2B764FD6007B51EB /* ArtiSense3.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 2A5315CD2B764FD6007B51EB /* ArtiSense3.mlmodelc */; };
+		2A5315D02B76603F007B51EB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5315CF2B76603F007B51EB /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1BF4D6C42B493FDC005BF87D /* publickey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = publickey.pem; sourceTree = "<group>"; };
 		2A5116AE2B72B25A008D5699 /* GizoSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GizoSDK.xcodeproj; path = "../gizo-ios-sdk-source/GizoSDK.xcodeproj"; sourceTree = "<group>"; };
 		2A5315CD2B764FD6007B51EB /* ArtiSense3.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ArtiSense3.mlmodelc; sourceTree = "<group>"; };
+		2A5315CF2B76603F007B51EB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				1B62E9FF2B3166FE00F8B91D /* LaunchScreen.storyboard */,
 				1B62EA022B3166FE00F8B91D /* Info.plist */,
 				1B0F8A932B4684E000A7A793 /* Media.xcassets */,
+				2A5315CF2B76603F007B51EB /* Utils.swift */,
 			);
 			path = TestDemo;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				1B0F8A922B46845900A7A793 /* DriveNoCameraViewController.swift in Sources */,
 				1B62E9F52B3166FB00F8B91D /* AppDelegate.swift in Sources */,
 				1B62E9F72B3166FB00F8B91D /* SceneDelegate.swift in Sources */,
+				2A5315D02B76603F007B51EB /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
