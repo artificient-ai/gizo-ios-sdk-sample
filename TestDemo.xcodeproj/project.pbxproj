@@ -17,11 +17,12 @@
 		1B62E9FE2B3166FE00F8B91D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9FD2B3166FE00F8B91D /* Assets.xcassets */; };
 		1B62EA012B3166FE00F8B91D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B62E9FF2B3166FE00F8B91D /* LaunchScreen.storyboard */; };
 		1B9438FC2B3D668000285788 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9438F22B3D668000285788 /* DriveViewController.swift */; };
-		1B9438FD2B3D668000285788 /* ArtiSense3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1B9438F42B3D668000285788 /* ArtiSense3.mlmodel */; };
+		1B9438FD2B3D668000285788 /* ArtiSense3222.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1B9438F42B3D668000285788 /* ArtiSense3222.mlmodel */; };
 		1BF4D6C52B493FDC005BF87D /* license.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4D6C32B493FDC005BF87D /* license.json */; };
 		1BF4D6C62B493FDC005BF87D /* publickey.pem in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4D6C42B493FDC005BF87D /* publickey.pem */; };
 		2A5116B62B72B272008D5699 /* GizoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5116B42B72B25A008D5699 /* GizoSDK.framework */; };
 		2A5315BE2B72BAC5007B51EB /* GizoSDK-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = 2A5315BD2B72BAC5007B51EB /* GizoSDK-iOS */; };
+		2A5315CE2B764FD6007B51EB /* ArtiSense3.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 2A5315CD2B764FD6007B51EB /* ArtiSense3.mlmodelc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +48,11 @@
 		1B62EA002B3166FE00F8B91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B62EA022B3166FE00F8B91D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B9438F22B3D668000285788 /* DriveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
-		1B9438F42B3D668000285788 /* ArtiSense3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ArtiSense3.mlmodel; sourceTree = "<group>"; };
+		1B9438F42B3D668000285788 /* ArtiSense3222.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ArtiSense3222.mlmodel; sourceTree = "<group>"; };
 		1BF4D6C32B493FDC005BF87D /* license.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = license.json; sourceTree = "<group>"; };
 		1BF4D6C42B493FDC005BF87D /* publickey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = publickey.pem; sourceTree = "<group>"; };
 		2A5116AE2B72B25A008D5699 /* GizoSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GizoSDK.xcodeproj; path = "../gizo-ios-sdk-source/GizoSDK.xcodeproj"; sourceTree = "<group>"; };
+		2A5315CD2B764FD6007B51EB /* ArtiSense3.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ArtiSense3.mlmodelc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,8 @@
 		1B9438F32B3D668000285788 /* saved_model */ = {
 			isa = PBXGroup;
 			children = (
-				1B9438F42B3D668000285788 /* ArtiSense3.mlmodel */,
+				2A5315CD2B764FD6007B51EB /* ArtiSense3.mlmodelc */,
+				1B9438F42B3D668000285788 /* ArtiSense3222.mlmodel */,
 			);
 			path = saved_model;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B62EA012B3166FE00F8B91D /* LaunchScreen.storyboard in Resources */,
+				2A5315CE2B764FD6007B51EB /* ArtiSense3.mlmodelc in Resources */,
 				1B62E9FE2B3166FE00F8B91D /* Assets.xcassets in Resources */,
 				1B0F8A942B4684E000A7A793 /* Media.xcassets in Resources */,
 				1BF4D6C62B493FDC005BF87D /* publickey.pem in Resources */,
@@ -234,7 +238,7 @@
 			files = (
 				1B62E9F92B3166FB00F8B91D /* ViewController.swift in Sources */,
 				1B0F8A962B46901900A7A793 /* DriveTimeView.swift in Sources */,
-				1B9438FD2B3D668000285788 /* ArtiSense3.mlmodel in Sources */,
+				1B9438FD2B3D668000285788 /* ArtiSense3222.mlmodel in Sources */,
 				1B9438FC2B3D668000285788 /* DriveViewController.swift in Sources */,
 				1B0F8A922B46845900A7A793 /* DriveNoCameraViewController.swift in Sources */,
 				1B62E9F52B3166FB00F8B91D /* AppDelegate.swift in Sources */,

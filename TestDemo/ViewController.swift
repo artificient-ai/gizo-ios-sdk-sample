@@ -31,6 +31,8 @@ class ViewController: UIViewController, GizoDelegate {
         options.imuSetting.allowAccelerationSensor = true
         options.imuSetting.saveCsvFile = true
         options.batterySetting.checkBattery = true
+        options.batterySetting.lowBatteryLimit = 25
+        options.batterySetting.lowBatteryStop = 15
         options.orientationSetting.allowGravitySensor = true
         options.videoSetting.allowRecording = true
         options.userActivitySetting.allowUserActivity = true

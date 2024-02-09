@@ -15,6 +15,7 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
     var previewBtn: UIButton?
     var speedLabel: UILabel!
     var speedLimitLabel: UILabel!
+    var batteryStatus = BatteryStatus.NORMAL
     
     func onImuSensor(acceleration: NSDictionary?, linearAcceleration: NSDictionary?, accelerationUnc: NSDictionary?, gyroscope: NSDictionary?, magnetic: NSDictionary?, gravity: NSDictionary?) {
         print("onImuSensor: acceleration=\(String(describing: acceleration)) linearAcceleration=\(String(describing: linearAcceleration)) accelerationUnc=\(String(describing: accelerationUnc)) gyroscope=\(String(describing: gyroscope)) magnetic=\(String(describing: magnetic)) gravity=\(String(describing: gravity))")
@@ -81,6 +82,10 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
     }
     
     func onBatteryStatusChange(status: BatteryStatus) {
+        batteryStatus = status
+        if(status == BatteryStatus.LOW_BATTERY_STOP){
+            onRecordClick()
+        }
         print("onBatteryStatusChange: status=\(status.rawValue)")
     }
     
@@ -90,6 +95,15 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
 
     func onUserActivity(type: String) {
         print("onUserActivity: type=\(type)")
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Low battery", message: "Battery is low, we will stop recording", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            print("OK button tapped.")
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -160,6 +174,11 @@ class DriveViewController: UIViewController, GizoAnalysisDelegate {
     }
     
     @objc func onRecordClick() {
+        if(batteryStatus == BatteryStatus.LOW_BATTERY_STOP){
+            showAlert()
+            recordBtn?.isSelected = false
+            return
+        }
         recordBtn?.isSelected = !(recordBtn!.isSelected)
         if (recordBtn!.isSelected) {
             Gizo.app.gizoAnalysis.startSavingSession()
