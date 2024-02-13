@@ -12,7 +12,7 @@ import CoreML
 class ViewController: UIViewController, GizoDelegate {
     var model: MLModel?
     func setLoadModelObserver(status: LoadModelStatus) {
-        print("setLoadModelObserver status=\(status.rawValue)")
+        print("setLoadModelObserver status=\(status)")
     }
 
     override func viewDidLoad() {
@@ -31,6 +31,7 @@ class ViewController: UIViewController, GizoDelegate {
         options.imuSetting.allowAccelerationSensor = true
         options.imuSetting.saveCsvFile = true
         options.batterySetting.checkBattery = true
+        options.batterySetting.checkThermal = true
         options.batterySetting.lowBatteryLimit = 25
         options.batterySetting.lowBatteryStop = 15
         options.orientationSetting.allowGravitySensor = true
