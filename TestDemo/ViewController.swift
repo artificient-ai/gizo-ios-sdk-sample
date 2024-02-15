@@ -35,7 +35,7 @@ class ViewController: UIViewController, GizoDelegate {
         options.batterySetting.lowBatteryLimit = 25
         options.batterySetting.lowBatteryStop = 15
         options.orientationSetting.allowGravitySensor = true
-        options.videoSetting.allowRecording = true
+//        options.videoSetting.allowRecording = true
         options.userActivitySetting.allowUserActivity = true
         options.userActivitySetting.saveCsvFile = true
         Gizo.initialize(delegate: self, options: options)
@@ -57,14 +57,12 @@ class ViewController: UIViewController, GizoDelegate {
     }
 
     @objc func onButtonClick() {
-        Gizo.options?.analysisSetting.allowAnalysis = true
         let ctrl = DriveViewController.init()
         ctrl.modalPresentationStyle = UIModalPresentationStyle.fullScreen;
         self.present(ctrl, animated: true, completion: nil)
     }
     
     @objc func onButton2Click() {
-        Gizo.options?.analysisSetting.allowAnalysis = false
         let ctrl = DriveNoCameraViewController.init()
         ctrl.modalPresentationStyle = UIModalPresentationStyle.fullScreen;
         self.present(ctrl, animated: true, completion: nil)

@@ -84,6 +84,11 @@ class DriveNoCameraViewController: UIViewController, GizoAnalysisDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let option = Gizo.options
+        option?.videoSetting.allowRecording = false
+        Gizo.options = option
+        
         self.view.backgroundColor = UIColor.white
         
         let backBtn = UIButton.init(type: .custom)
