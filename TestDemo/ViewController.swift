@@ -35,7 +35,7 @@ class ViewController: UIViewController, GizoDelegate {
         options.batterySetting.lowBatteryLimit = 25
         options.batterySetting.lowBatteryStop = 15
         options.orientationSetting.allowGravitySensor = true
-//        options.videoSetting.allowRecording = true
+        options.videoSetting.allowRecording = true
         options.userActivitySetting.allowUserActivity = true
         options.userActivitySetting.saveCsvFile = true
         Gizo.initialize(delegate: self, options: options)
