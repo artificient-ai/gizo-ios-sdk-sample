@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A3F3B182BD13F5F009F04F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3F3B172BD13F5F009F04F2 /* AppDelegate.swift */; };
+		2A3F3B1A2BD13F5F009F04F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3F3B192BD13F5F009F04F2 /* SceneDelegate.swift */; };
+		2A3F3B1C2BD13F5F009F04F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3F3B1B2BD13F5F009F04F2 /* ViewController.swift */; };
+		2A3F3B1F2BD13F5F009F04F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3F3B1D2BD13F5F009F04F2 /* Main.storyboard */; };
+		2A3F3B212BD13F60009F04F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3F3B202BD13F60009F04F2 /* Assets.xcassets */; };
+		2A3F3B242BD13F60009F04F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3F3B222BD13F60009F04F2 /* LaunchScreen.storyboard */; };
+		2ADF436C2BD26E8E00980A4D /* DriveNoCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF436B2BD26E8E00980A4D /* DriveNoCameraViewController.swift */; };
+		2ADF43712BD26EA400980A4D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF436D2BD26EA400980A4D /* Utils.swift */; };
+		2ADF43722BD26EA400980A4D /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF436E2BD26EA400980A4D /* DriveViewController.swift */; };
+		2ADF43732BD26EA400980A4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF436F2BD26EA400980A4D /* SceneDelegate.swift */; };
+		2ADF43742BD26EA400980A4D /* DriveTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF43702BD26EA400980A4D /* DriveTimeView.swift */; };
+		2ADF43972BD789A000980A4D /* license.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF43962BD789A000980A4D /* license.json */; };
+		428F8A59506E8BD7C1B42B64 /* Pods_GizoSDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C061AAF9AA16B826D0DE758 /* Pods_GizoSDKExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A3F3B2B2BD13F60009F04F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A3F3B0C2BD13F5E009F04F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A3F3B132BD13F5E009F04F2;
+			remoteInfo = GizoSDKExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3ECA4A6C2CDE4E1700AD632C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00F487E1E3975CA29F843D17 /* Pods-GizoSDKExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GizoSDKExample.release.xcconfig"; path = "Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample.release.xcconfig"; sourceTree = "<group>"; };
+		2A3F3B172BD13F5F009F04F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A3F3B192BD13F5F009F04F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2A3F3B1B2BD13F5F009F04F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A3F3B1E2BD13F5F009F04F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A3F3B202BD13F60009F04F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A3F3B232BD13F60009F04F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A3F3B252BD13F60009F04F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ADF436B2BD26E8E00980A4D /* DriveNoCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveNoCameraViewController.swift; sourceTree = "<group>"; };
+		2ADF436D2BD26EA400980A4D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2ADF436E2BD26EA400980A4D /* DriveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
+		2ADF436F2BD26EA400980A4D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2ADF43702BD26EA400980A4D /* DriveTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveTimeView.swift; sourceTree = "<group>"; };
+		2ADF43962BD789A000980A4D /* license.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = license.json; sourceTree = "<group>"; };
+		3E49EA9E2CDE4AD500E2E351 /* GizoSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GizoSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E49EA9F2CDE4AD500E2E351 /* GizoSDKExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GizoSDKExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C061AAF9AA16B826D0DE758 /* Pods_GizoSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GizoSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9793831026F6CFF82E0D8FF /* Pods-GizoSDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GizoSDKExample.debug.xcconfig"; path = "Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A3F3B112BD13F5E009F04F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				428F8A59506E8BD7C1B42B64 /* Pods_GizoSDKExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A3F3B272BD13F60009F04F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A3F3B0B2BD13F5E009F04F2 = {
+			isa = PBXGroup;
+			children = (
+				2A3F3B162BD13F5F009F04F2 /* GizoSDKExample */,
+				2A3F3B152BD13F5F009F04F2 /* Products */,
+				B79EC08CE80D9CD5BF0C1730 /* Pods */,
+				9182A1C3C2C571A59E501649 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2A3F3B152BD13F5F009F04F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E49EA9E2CDE4AD500E2E351 /* GizoSDKExample.app */,
+				3E49EA9F2CDE4AD500E2E351 /* GizoSDKExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A3F3B162BD13F5F009F04F2 /* GizoSDKExample */ = {
+			isa = PBXGroup;
+			children = (
+				2ADF43952BD7899200980A4D /* License */,
+				2A3F3B172BD13F5F009F04F2 /* AppDelegate.swift */,
+				2A3F3B192BD13F5F009F04F2 /* SceneDelegate.swift */,
+				2A3F3B1B2BD13F5F009F04F2 /* ViewController.swift */,
+				2ADF436B2BD26E8E00980A4D /* DriveNoCameraViewController.swift */,
+				2ADF43702BD26EA400980A4D /* DriveTimeView.swift */,
+				2ADF436E2BD26EA400980A4D /* DriveViewController.swift */,
+				2ADF436F2BD26EA400980A4D /* SceneDelegate.swift */,
+				2ADF436D2BD26EA400980A4D /* Utils.swift */,
+				2A3F3B1D2BD13F5F009F04F2 /* Main.storyboard */,
+				2A3F3B202BD13F60009F04F2 /* Assets.xcassets */,
+				2A3F3B222BD13F60009F04F2 /* LaunchScreen.storyboard */,
+				2A3F3B252BD13F60009F04F2 /* Info.plist */,
+			);
+			path = GizoSDKExample;
+			sourceTree = "<group>";
+		};
+		2ADF43952BD7899200980A4D /* License */ = {
+			isa = PBXGroup;
+			children = (
+				2ADF43962BD789A000980A4D /* license.json */,
+			);
+			path = License;
+			sourceTree = "<group>";
+		};
+		9182A1C3C2C571A59E501649 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C061AAF9AA16B826D0DE758 /* Pods_GizoSDKExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B79EC08CE80D9CD5BF0C1730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9793831026F6CFF82E0D8FF /* Pods-GizoSDKExample.debug.xcconfig */,
+				00F487E1E3975CA29F843D17 /* Pods-GizoSDKExample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A3F3B132BD13F5E009F04F2 /* GizoSDKExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A3F3B3E2BD13F60009F04F2 /* Build configuration list for PBXNativeTarget "GizoSDKExample" */;
+			buildPhases = (
+				43C2FC5DBFD841DF836D9574 /* [CP] Check Pods Manifest.lock */,
+				2A3F3B102BD13F5E009F04F2 /* Sources */,
+				2A3F3B112BD13F5E009F04F2 /* Frameworks */,
+				2A3F3B122BD13F5E009F04F2 /* Resources */,
+				3ECA4A6C2CDE4E1700AD632C /* Embed Frameworks */,
+				09C71D5841764124716B05D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GizoSDKExample;
+			productName = GizoSDKExample;
+			productReference = 3E49EA9E2CDE4AD500E2E351 /* GizoSDKExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A3F3B292BD13F60009F04F2 /* GizoSDKExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A3F3B412BD13F60009F04F2 /* Build configuration list for PBXNativeTarget "GizoSDKExampleTests" */;
+			buildPhases = (
+				2A3F3B262BD13F60009F04F2 /* Sources */,
+				2A3F3B272BD13F60009F04F2 /* Frameworks */,
+				2A3F3B282BD13F60009F04F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A3F3B2C2BD13F60009F04F2 /* PBXTargetDependency */,
+			);
+			name = GizoSDKExampleTests;
+			productName = GizoSDKExampleTests;
+			productReference = 3E49EA9F2CDE4AD500E2E351 /* GizoSDKExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A3F3B0C2BD13F5E009F04F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2A3F3B132BD13F5E009F04F2 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					2A3F3B292BD13F60009F04F2 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 2A3F3B132BD13F5E009F04F2;
+					};
+				};
+			};
+			buildConfigurationList = 2A3F3B0F2BD13F5E009F04F2 /* Build configuration list for PBXProject "GizoSDKExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				he,
+				ar,
+				el,
+				"zh-Hans",
+				ja,
+				uk,
+				yo,
+				es,
+				sl,
+				da,
+				it,
+				bg,
+				"es-ES",
+				sv,
+				ko,
+				"zh-Hant",
+				hu,
+				tr,
+				"pt-BR",
+				vi,
+				lt,
+				ru,
+				fr,
+				nl,
+				"pt-PT",
+				ca,
+				gl,
+				cs,
+				fa,
+			);
+			mainGroup = 2A3F3B0B2BD13F5E009F04F2;
+			productRefGroup = 2A3F3B152BD13F5F009F04F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A3F3B132BD13F5E009F04F2 /* GizoSDKExample */,
+				2A3F3B292BD13F60009F04F2 /* GizoSDKExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A3F3B122BD13F5E009F04F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A3F3B242BD13F60009F04F2 /* LaunchScreen.storyboard in Resources */,
+				2A3F3B212BD13F60009F04F2 /* Assets.xcassets in Resources */,
+				2A3F3B1F2BD13F5F009F04F2 /* Main.storyboard in Resources */,
+				2ADF43972BD789A000980A4D /* license.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A3F3B282BD13F60009F04F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09C71D5841764124716B05D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43C2FC5DBFD841DF836D9574 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GizoSDKExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A3F3B102BD13F5E009F04F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ADF43712BD26EA400980A4D /* Utils.swift in Sources */,
+				2ADF43732BD26EA400980A4D /* SceneDelegate.swift in Sources */,
+				2ADF43742BD26EA400980A4D /* DriveTimeView.swift in Sources */,
+				2A3F3B1C2BD13F5F009F04F2 /* ViewController.swift in Sources */,
+				2ADF436C2BD26E8E00980A4D /* DriveNoCameraViewController.swift in Sources */,
+				2A3F3B182BD13F5F009F04F2 /* AppDelegate.swift in Sources */,
+				2A3F3B1A2BD13F5F009F04F2 /* SceneDelegate.swift in Sources */,
+				2ADF43722BD26EA400980A4D /* DriveViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A3F3B262BD13F60009F04F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A3F3B2C2BD13F60009F04F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A3F3B132BD13F5E009F04F2 /* GizoSDKExample */;
+			targetProxy = 2A3F3B2B2BD13F60009F04F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A3F3B1D2BD13F5F009F04F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A3F3B1E2BD13F5F009F04F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A3F3B222BD13F60009F04F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A3F3B232BD13F60009F04F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A3F3B3C2BD13F60009F04F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A3F3B3D2BD13F60009F04F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A3F3B3F2BD13F60009F04F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9793831026F6CFF82E0D8FF /* Pods-GizoSDKExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 59T7H63PY8;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxCoreNavigation/MapboxCoreNavigation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxDirections/MapboxDirections.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxMaps/MapboxMaps.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxNavigation/MapboxNavigation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxSpeech/MapboxSpeech.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Polyline/Polyline.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Solar-dev/Solar.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Turf/Turf.framework/Headers\"",
+					"$(SRCROOT)/Pods",
+				);
+				INFOPLIST_FILE = GizoSDKExample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Drive;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Drive;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Drive;
+				INFOPLIST_KEY_NSLocationUsageDescription = Drive;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Drive;
+				INFOPLIST_KEY_NSMotionUsageDescription = Drive;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.artificient.gizosdkexample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A3F3B402BD13F60009F04F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00F487E1E3975CA29F843D17 /* Pods-GizoSDKExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 59T7H63PY8;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxCoreNavigation/MapboxCoreNavigation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxDirections/MapboxDirections.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxMaps/MapboxMaps.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxNavigation/MapboxNavigation.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MapboxSpeech/MapboxSpeech.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Polyline/Polyline.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Solar-dev/Solar.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Turf/Turf.framework/Headers\"",
+					"$(SRCROOT)/Pods",
+				);
+				INFOPLIST_FILE = GizoSDKExample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Drive;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Drive;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Drive;
+				INFOPLIST_KEY_NSLocationUsageDescription = Drive;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Drive;
+				INFOPLIST_KEY_NSMotionUsageDescription = Drive;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.artificient.gizosdkexample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2A3F3B422BD13F60009F04F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59T7H63PY8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.artificient.GizoSDKExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GizoSDKExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GizoSDKExample";
+			};
+			name = Debug;
+		};
+		2A3F3B432BD13F60009F04F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59T7H63PY8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.artificient.GizoSDKExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GizoSDKExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GizoSDKExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A3F3B0F2BD13F5E009F04F2 /* Build configuration list for PBXProject "GizoSDKExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A3F3B3C2BD13F60009F04F2 /* Debug */,
+				2A3F3B3D2BD13F60009F04F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A3F3B3E2BD13F60009F04F2 /* Build configuration list for PBXNativeTarget "GizoSDKExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A3F3B3F2BD13F60009F04F2 /* Debug */,
+				2A3F3B402BD13F60009F04F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A3F3B412BD13F60009F04F2 /* Build configuration list for PBXNativeTarget "GizoSDKExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A3F3B422BD13F60009F04F2 /* Debug */,
+				2A3F3B432BD13F60009F04F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A3F3B0C2BD13F5E009F04F2 /* Project object */;
+}
