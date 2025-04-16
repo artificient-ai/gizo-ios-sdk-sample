@@ -1,8 +1,8 @@
 //
 //  DriveNoCameraViewController.swift
-//  GizoSDKExample
+//  TestDemo
 //
-//  Created by Mahyar on 2024/1/4.
+//  Created by Hepburn on 2024/1/4.
 //
 
 import UIKit
@@ -14,12 +14,13 @@ class DriveNoCameraViewController: UIViewController, GizoDelegate {
     
     private var timeView: DriveTimeView?
     private var button: UIButton?
+    private var isRecording = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Gizo.shared.delegate = self
-        Gizo.shared.enableDetections()
+//        Gizo.shared.enableDetections()
     
         self.view.backgroundColor = UIColor.white
         
@@ -61,11 +62,12 @@ class DriveNoCameraViewController: UIViewController, GizoDelegate {
     }
     
     @objc func onButtonClick() {
-        button?.isSelected = !(button!.isSelected)
-        if ((button?.isSelected)!) {
+        if (!isRecording) {
+            button?.isSelected = true
             startDrive()
         }
         else {
+            button?.isSelected = false
             stopDrive()
         }
     }
@@ -82,11 +84,14 @@ class DriveNoCameraViewController: UIViewController, GizoDelegate {
         } catch {
             print("An unknown error occurred: \(error)")
         }
+        
+        isRecording = true
     }
     
     func stopDrive() {
         timeView?.stopTimer()
         Gizo.shared.stopRecording()
+        isRecording = false
     }
     
     @objc func onBackClick() {
@@ -94,12 +99,15 @@ class DriveNoCameraViewController: UIViewController, GizoDelegate {
     }
     
     func didStartRecording() {
-        button?.isSelected.toggle()
+        button?.isSelected = true
+        isRecording = true
         timeView?.startTimer()
     }
     
     func didStopRecording() {
-        button?.isSelected.toggle()
+        isRecording = false
+        button?.isSelected = false
         timeView?.stopTimer()
+        
     }
 }

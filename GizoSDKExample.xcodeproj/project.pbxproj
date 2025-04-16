@@ -11,7 +11,6 @@
 		2A3F3B1A2BD13F5F009F04F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3F3B192BD13F5F009F04F2 /* SceneDelegate.swift */; };
 		2A3F3B1C2BD13F5F009F04F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3F3B1B2BD13F5F009F04F2 /* ViewController.swift */; };
 		2A3F3B1F2BD13F5F009F04F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3F3B1D2BD13F5F009F04F2 /* Main.storyboard */; };
-		2A3F3B212BD13F60009F04F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3F3B202BD13F60009F04F2 /* Assets.xcassets */; };
 		2A3F3B242BD13F60009F04F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3F3B222BD13F60009F04F2 /* LaunchScreen.storyboard */; };
 		2ADF436C2BD26E8E00980A4D /* DriveNoCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF436B2BD26E8E00980A4D /* DriveNoCameraViewController.swift */; };
 		2ADF43712BD26EA400980A4D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF436D2BD26EA400980A4D /* Utils.swift */; };
@@ -19,6 +18,7 @@
 		2ADF43732BD26EA400980A4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF436F2BD26EA400980A4D /* SceneDelegate.swift */; };
 		2ADF43742BD26EA400980A4D /* DriveTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF43702BD26EA400980A4D /* DriveTimeView.swift */; };
 		2ADF43972BD789A000980A4D /* license.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF43962BD789A000980A4D /* license.json */; };
+		3EB32FEA2DAFBBF70059B004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EB32FE92DAFBBF70059B004 /* Assets.xcassets */; };
 		428F8A59506E8BD7C1B42B64 /* Pods_GizoSDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C061AAF9AA16B826D0DE758 /* Pods_GizoSDKExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,6 @@
 		2A3F3B192BD13F5F009F04F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A3F3B1B2BD13F5F009F04F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A3F3B1E2BD13F5F009F04F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A3F3B202BD13F60009F04F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A3F3B232BD13F60009F04F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A3F3B252BD13F60009F04F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ADF436B2BD26E8E00980A4D /* DriveNoCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveNoCameraViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		2ADF43962BD789A000980A4D /* license.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = license.json; sourceTree = "<group>"; };
 		3E49EA9E2CDE4AD500E2E351 /* GizoSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GizoSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E49EA9F2CDE4AD500E2E351 /* GizoSDKExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GizoSDKExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB32FE92DAFBBF70059B004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C061AAF9AA16B826D0DE758 /* Pods_GizoSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GizoSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9793831026F6CFF82E0D8FF /* Pods-GizoSDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GizoSDKExample.debug.xcconfig"; path = "Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,12 +112,12 @@
 				2A3F3B192BD13F5F009F04F2 /* SceneDelegate.swift */,
 				2A3F3B1B2BD13F5F009F04F2 /* ViewController.swift */,
 				2ADF436B2BD26E8E00980A4D /* DriveNoCameraViewController.swift */,
+				3EB32FE92DAFBBF70059B004 /* Assets.xcassets */,
 				2ADF43702BD26EA400980A4D /* DriveTimeView.swift */,
 				2ADF436E2BD26EA400980A4D /* DriveViewController.swift */,
 				2ADF436F2BD26EA400980A4D /* SceneDelegate.swift */,
 				2ADF436D2BD26EA400980A4D /* Utils.swift */,
 				2A3F3B1D2BD13F5F009F04F2 /* Main.storyboard */,
-				2A3F3B202BD13F60009F04F2 /* Assets.xcassets */,
 				2A3F3B222BD13F60009F04F2 /* LaunchScreen.storyboard */,
 				2A3F3B252BD13F60009F04F2 /* Info.plist */,
 			);
@@ -264,8 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A3F3B242BD13F60009F04F2 /* LaunchScreen.storyboard in Resources */,
-				2A3F3B212BD13F60009F04F2 /* Assets.xcassets in Resources */,
 				2A3F3B1F2BD13F5F009F04F2 /* Main.storyboard in Resources */,
+				3EB32FEA2DAFBBF70059B004 /* Assets.xcassets in Resources */,
 				2ADF43972BD789A000980A4D /* license.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +514,7 @@
 					"$(SRCROOT)/Pods",
 				);
 				INFOPLIST_FILE = GizoSDKExample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Gizo.Native.Manual;
 				INFOPLIST_KEY_NSCameraUsageDescription = Drive;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Drive;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Drive;
@@ -531,7 +532,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.artificient.gizosdkexample;
+				PRODUCT_BUNDLE_IDENTIFIER = de.artificient.gizo.native.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -566,6 +567,7 @@
 					"$(SRCROOT)/Pods",
 				);
 				INFOPLIST_FILE = GizoSDKExample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Gizo.Native.Manual;
 				INFOPLIST_KEY_NSCameraUsageDescription = Drive;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = Drive;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = Drive;
@@ -583,7 +585,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.artificient.gizosdkexample;
+				PRODUCT_BUNDLE_IDENTIFIER = de.artificient.gizo.native.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
