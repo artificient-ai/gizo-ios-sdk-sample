@@ -19,6 +19,8 @@
 		2ADF43742BD26EA400980A4D /* DriveTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF43702BD26EA400980A4D /* DriveTimeView.swift */; };
 		2ADF43972BD789A000980A4D /* license.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF43962BD789A000980A4D /* license.json */; };
 		3EB32FEA2DAFBBF70059B004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EB32FE92DAFBBF70059B004 /* Assets.xcassets */; };
+		3EB3300D2DB289090059B004 /* GizoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB3300C2DB288970059B004 /* GizoSDK.framework */; };
+		3EB3300E2DB289090059B004 /* GizoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB3300C2DB288970059B004 /* GizoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		428F8A59506E8BD7C1B42B64 /* Pods_GizoSDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C061AAF9AA16B826D0DE758 /* Pods_GizoSDKExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,13 @@
 			remoteGlobalIDString = 2A3F3B132BD13F5E009F04F2;
 			remoteInfo = GizoSDKExample;
 		};
+		3EB3300B2DB288970059B004 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EB330052DB2888C0059B004 /* GizoSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2A558B952BD241CB00F14202;
+			remoteInfo = GizoSDK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3EB3300E2DB289090059B004 /* GizoSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +72,7 @@
 		3E49EA9E2CDE4AD500E2E351 /* GizoSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GizoSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E49EA9F2CDE4AD500E2E351 /* GizoSDKExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GizoSDKExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB32FE92DAFBBF70059B004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EB330052DB2888C0059B004 /* GizoSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GizoSDK.xcodeproj; path = "../../gizo-ios-sdk-cocoapods/GizoSDK.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		6C061AAF9AA16B826D0DE758 /* Pods_GizoSDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GizoSDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9793831026F6CFF82E0D8FF /* Pods-GizoSDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GizoSDKExample.debug.xcconfig"; path = "Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB3300D2DB289090059B004 /* GizoSDK.framework in Frameworks */,
 				428F8A59506E8BD7C1B42B64 /* Pods_GizoSDKExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +100,7 @@
 		2A3F3B0B2BD13F5E009F04F2 = {
 			isa = PBXGroup;
 			children = (
+				3EB330052DB2888C0059B004 /* GizoSDK.xcodeproj */,
 				2A3F3B162BD13F5F009F04F2 /* GizoSDKExample */,
 				2A3F3B152BD13F5F009F04F2 /* Products */,
 				B79EC08CE80D9CD5BF0C1730 /* Pods */,
@@ -132,6 +145,14 @@
 			path = License;
 			sourceTree = "<group>";
 		};
+		3EB330082DB288970059B004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EB3300C2DB288970059B004 /* GizoSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9182A1C3C2C571A59E501649 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +182,6 @@
 				2A3F3B112BD13F5E009F04F2 /* Frameworks */,
 				2A3F3B122BD13F5E009F04F2 /* Resources */,
 				3ECA4A6C2CDE4E1700AD632C /* Embed Frameworks */,
-				09C71D5841764124716B05D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +270,12 @@
 			mainGroup = 2A3F3B0B2BD13F5E009F04F2;
 			productRefGroup = 2A3F3B152BD13F5F009F04F2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3EB330082DB288970059B004 /* Products */;
+					ProjectRef = 3EB330052DB2888C0059B004 /* GizoSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2A3F3B132BD13F5E009F04F2 /* GizoSDKExample */,
@@ -257,6 +283,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3EB3300C2DB288970059B004 /* GizoSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GizoSDK.framework;
+			remoteRef = 3EB3300B2DB288970059B004 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2A3F3B122BD13F5E009F04F2 /* Resources */ = {
@@ -280,23 +316,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09C71D5841764124716B05D0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GizoSDKExample/Pods-GizoSDKExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		43C2FC5DBFD841DF836D9574 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,7 +515,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 59T7H63PY8;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -549,7 +568,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 59T7H63PY8;
 				GENERATE_INFOPLIST_FILE = YES;

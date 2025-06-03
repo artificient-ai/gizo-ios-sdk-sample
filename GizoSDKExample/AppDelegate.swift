@@ -21,15 +21,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func initialieGizoSDK(launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         
-        let result = Gizo.shared.initialize(options: GizoOptions(), launchOptions: launchOptions)
-        Gizo.shared.setToken(clientId: "<clientId>", clientSecret: "<clientSecret>")
+        let options = GizoOptions()
+        options.useGizoScoring = true
+        options.autoStart = false
+        options.autoStop = false
+        
+        let result = Gizo.shared.initialize(options: options, launchOptions: launchOptions)
+        Gizo.shared.setToken(clientId: "com.artificientsdk", clientSecret: "e63523316f2749959458573a029e0a1e")
         
         if result.isSuccessful {
             print("[GizoSDK]: Initialization successful")
             
             Task {
                 
-                var userId:Int64? = 0
+                var userId:Int64? = 558
                 if userId == nil
                 {
                     let userId = await Gizo.shared.createUser()
@@ -61,6 +66,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        
     }
 }
 
